@@ -1,0 +1,397 @@
+
+
+
+/* NAVIGATION */
+
+/* #############################  BASICS ########################################################################## */
+
+/* ############################## all about - BASIC SECTION - ABOUT - ############################################# */
+
+/* ############################## all about - BASIC SECTION - Portfolio - ############################################# */
+
+/* ############################## all about - BASIC SECTION - CONTACT - ############################################# */
+
+/* ############################## all about - BASIC SECTION - FOOTER - ############################################# */
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* #############################  BASICS ###################################################################### */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+:root {
+  --color-backgroundLightGreyViolett: rgb(237, 237, 241);
+  --color-mainTextColor: rgb(28, 26, 29);
+  --color-inputTextColor: rgba(119, 112, 122, 1);
+  --color-buttonDefault: rgba(254, 200, 36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato";
+  color: var(--color-mainTextColor);
+  
+}
+
+
+ .basic-section {
+  display: flex;
+  justify-content: center;
+}
+
+
+.basic-container {
+  max-width: 768px;
+  width: 100%;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.button {
+  font-weight: 700;
+  font-family: "Lato";
+  color: var(--color-mainTextColor);
+  text-decoration: none;
+  background-color: var(--color-buttonDefault);
+  padding: 16px 32px 16px 32px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;  
+}
+
+.button:hover {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.388);
+  /* background-color: var(--color-buttonHover); */
+}
+
+.button:active {
+  filter: brightness(0.8);
+}
+
+
+
+
+
+
+/* ############################## all about - BASIC SECTION - ABOUT - ############################################# */
+
+/* all about ..........head-bar-about */
+.head-bar-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: rgba(165, 42, 42, 0.459); */
+  padding-top: 47px;
+  padding-bottom: 47px;
+}
+
+.social-media-navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 78px;
+  /* background-color: rgba(35, 206, 44, 0.459); */
+  height: 39px;
+}
+
+.social-media-img {
+  height: 39px;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  color: var(--color-mainTextColor);
+}
+
+
+/* all about ........content-container-about */
+
+.content-container-about {
+  display: flex;
+  margin-bottom: 47px;
+}
+
+.profile-img-box{
+  margin-right: 47px;
+  height: 340px;
+}
+
+.profile-img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content-box-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+/* ############################## all about - BASIC SECTION - Portfolio - ############################################# */
+
+.basic-section-portfolio {
+  background-color: var(--color-backgroundLightGreyViolett);
+}
+
+.basic-container-portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+.subheading {
+  text-align: center;
+  margin-top: 47px;
+  margin-bottom: 37px;
+}
+
+.image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  margin-bottom: 47px;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+
+.default-popup-div {
+  transition: all 0.3s ease;
+}
+
+.popup-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  --webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.popup-div-transparent {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
+
+/* ++++++++++++++++++++++++++++++++++ */
+
+.default-enlarged-image {
+  opacity: 0;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.enlarged-image {
+  opacity: 1;
+}
+
+/* +++++++++++++++++++++++++++++++ */
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.portfolio-img:hover {
+  transform: scale(0.96);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio-img:focus {
+  transform: scale(0.96);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.z-index-plus {
+  z-index: 1;
+}
+
+/* GRID template ######################################## */
+
+.image-box {
+  position: absolute;
+  margin-bottom: 47px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "AA BB CC"
+    "DD DD CC"
+    "MM SS LL"
+    "GG OO OO";
+}
+
+
+.image-box img:nth-child(1) {
+  grid-area: DD;
+}
+
+.image-box img:nth-child(2) {
+  grid-area: AA;
+}
+
+.image-box img:nth-child(4) {
+  grid-area: BB;
+}
+
+.image-box img:nth-child(5) {
+  grid-area: CC;
+}
+
+.image-box img:nth-child(6) {
+  grid-area: MM;
+}
+
+.image-box img:nth-child(7) {
+  grid-area: SS;
+}
+
+.image-box img:nth-child(3) {
+  grid-area: LL;
+}
+
+.image-box img:nth-child(8) {
+  grid-area: GG;
+}
+
+.image-box img:nth-child(9) {
+  grid-area: OO;
+}
+
+
+
+/* ############################## all about - BASIC SECTION - CONTACT - ############################################# */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 47px;
+}
+
+.input {
+  font-family: "Lato";
+  color: var(--color-mainTextColor);
+  background-color: var(--color-backgroundLightGreyViolett);
+  max-width: 460px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: none; 
+}
+
+.textarea {
+  resize: none;
+  height: 104px;
+  margin-bottom: 24px;
+}
+
+
+/* ############################## all about - BASIC SECTION - FOOTER - ############################################# */
+
+.footer {
+  border-top: solid 2px var(--color-backgroundLightGreyViolett);
+  display: flex;
+  justify-content: center;
+  padding: 37px 0 37px 0;
+  
+
+}
+
+.footer a {
+  font-family: "Lato";
+  color: var(--color-inputTextColor);
+  text-decoration: none;
+}
+
+.footer span {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: var(--color-inputTextColor);
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media screen and (width < 680px) {
+  .content-container-about {
+    flex-direction: column;
+  }
+  .profile-img-box{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
+  .content-box-about {
+    gap: 16px;
+    text-align: center;
+  }
+  .button {
+    margin-top: 16px;
+  }
+  .image-container {
+    aspect-ratio: 2 / 6;
+  }
+  .image-box {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+    "AA BB"
+    "DD DD"
+    "SS CC"
+    "MM CC"
+    "OO OO"
+    "GG LL";
+  }
+  .footer a {
+    font-size: 12px;
+  }
+  .head-bar-about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .social-media-navbar {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+  .basic-container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+}
+
